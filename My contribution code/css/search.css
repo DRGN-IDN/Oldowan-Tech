@@ -1,0 +1,22 @@
+/*Created by Achmad Mustafa Kemal 5/09/2020 10:42 PM*/
+
+/* For padding the title */
+h2
+{
+    padding:20px;
+    line-height: 3px; 
+}
+
+/* For padding the paragraph */
+.ppg
+{
+    padding-left: 20px;
+    line-height: 3px; 
+}
+
+/* For padding the searchbox */
+.psearchbox
+{
+    padding-top: 5px;
+    padding-left: 20px;
+}

@@ -1,0 +1,79 @@
+.banner {
+  margin: 0;
+  background-color: #0b406d;
+  width: 100%;
+  float: left;
+  padding-left: 20px;
+}
+
+.navbar-brand {
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.sidebar-heading {
+  padding-top: 2.5rem;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar-sticky {
+  background-color: #0b406d;
+}
+
+.nav-item {
+  background-color: white;
+}
+
+#images {
+  font-size: 15px;
+  background-color: #0b406d;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: rgba(196, 199, 195, 0.986);
+  text-decoration: none;
+}
+
+.menuActive {
+  background-color: #4d89c8;
+  color: white;
+}
+
+.menuInactive {
+  background-color: white;
+}
+
+.uppercase {
+  font-weight: bold;
+  color: #0b406d;
+  display: inline;
+}
+
+.table-info, .table-info>td, .table-info>th{
+  background-color: rgb(153, 211, 238);
+}
+
+#imageList{
+  width: 1000px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 20%;
+}
+
+#inputImage {
+  background-color: #0b406d;
+  color: white;
+}
+
+div.rounded-circle {
+  background-color: #fff;
+  border: solid;
+  border-width: 30px;
+  border-color: #4d89c8;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}

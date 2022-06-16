@@ -1,0 +1,27 @@
+/* tablesearch.css created : Achmad Mustafa Kemal 13/09/2020  8:21 PM */
+/* tablesearch.css experimentation to make table positioned more to right-hand side: Luke Sciberras 13/09/2020 2:45PM */
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  min-width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+​td, th{
+  border:1px solid black;
+  padding: 10px;
+}
+th{
+  background-color: #0b406d;
+  color: white;
+}
+table{
+  margin-left:auto;
+  margin-right:auto; 
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12); 
+}
+tr:hover{
+  background: #0b406d;
+  color: white;
+}

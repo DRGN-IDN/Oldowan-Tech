@@ -1,0 +1,119 @@
+<!--worklog for : -->
+<!--Search.html created and built by Luke Sciberras 5/09/2020 2:00PM-->  
+<!-- Updated navigation to dashboard from search page : Achmad Mustafa Kemal 5/09/2020  10:33 PM -->
+<!-- Added a Clear button for search page : Achmad Mustafa Kemal 5/09/2020 10:37 PM -->
+<!-- Added New CSS for search page : Achmad Mustafa Kemal 5/09/2020 10:44 PM -->
+<!-- Implemented padding for searchbox : Achmad Mustafa Kemal 5/09/2020 11:55 PM -->
+<!-- Implemented padding for header and paragraph : Achmad Mustafa Kemal 5/09/2020 10:59 PM -->
+<!-- Fixed reset button : Achmad Mustafa Kemal 6/09/2020 10:45 AM -->
+<!-- Debugging datepicker so that it no longer submits multiple data calls : Luke Sciberras 6/09/2020 11:00am -->
+<!-- Created dynamic table to meet Karim's suggestions : Achmad Mustafa Kemal and Luke Sciberras 8/09/2020  -->
+<!-- Table skeleton : Achmad Mustafa Kemal and Luke Sciberras 13/09/2020 6:00PM -->
+<!-- Added New CSS for table result : Achmad Mustafa Kemal 13/09/2020 8:21 PM -->
+<!-- Cleaned up commenting and arranged worklog in search.html to reflect changes made in iteration three : Luke Sciberras 14/09/2020 2:20 PM-->
+<!-- Added new button to kick of manual training of model with function in pipeline.js : Luke Sciberras 14/09/2020 2:35 PM-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<title >Oldowan Image Search </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+<!--external CSS scripts: -->
+<link rel="shortcut icon" type="image/png" href="img/logofinal.png" />
+<link rel="stylesheet" href="css/newstyledash.css" type="text/css"/>
+<link rel="stylesheet" href="css/search.css" type="text/css"/>
+<link rel="stylesheet" href="css/tablesearch.css" type="text/css"/>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Header-->
+<div class="header">
+    <img src="img/logofinal.png" alt="Oldowan Logo" width="10%;" style="border: solid 10px #4d89c8; border-radius: 50%; background-color: white;"/>
+    <p><b>Oldowan IROD - Image Labelling Engine</b></p>
+</div>
+</head>
+
+
+<body>
+
+<!--Nav bar-->
+<div class="topnav" id="navbares">
+    <label class="labelMM">Oldowan IROD - Image Search: </label>
+    <a href="dashboard.html"><i class="fa fa-bar-chart"></i>&nbspDashboard</a>
+    <a href="Annotate.html"><i class="fa fa-pencil"></i>&nbspAnnotate</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+</a>
+</div>
+
+<h2>Image search and processing: </h2>
+<p class="ppg">Please select the dates you wish to search: </p>
+
+<div class="modal-body" id="modal-body"> 
+  <form id="newForm">
+  <div class ="psearchbox">
+
+    <!--date picker for querying API-->
+    <input id="datepicker" autocomplete="off">
+    <!--<input type="button" id="submit" value="Submit" onclick="get_image_list()"></button>-->
+    <input type="button" onclick="resetfunction()" value="Reset">
+    <input type="button" class="trigger" value="Begin training" onclick="manualTrain(sList)"></button>
+  </div>
+  </form>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.js"></script>
+  <script type="text/javascript" src="js/pipeline.js"></script>
+
+    <!--display images on the screen-->
+    <!--hidden input that adds selected images to an array for processing-->
+    <div class="contents" id="contentidx" ></div>
+    <input type="hidden" name="list" id="list">
+</div>
+
+
+<!--Table to display image records from the API call:-->
+<div class ="psearchbox" id="psearchbox">
+<table >
+  <thead>
+      <tr>
+        <th>Select: </th>
+        <th>Image ID: </th>
+        <th>Uploaded date: </th>
+        <th>Past training: </th>
+      </tr>
+  </thead>
+  <tbody id="test1"></tbody>
+
+</table>
+<p id='datashow'></p>
+
+</div>
+
+<!--Footer:-->
+<div class="footer">
+    <p> © 2020 Copyright: 
+        <a href="http://www.oldowan.tech/"> Oldowan.tech </a>
+    </p>
+</div>
+
+<!--Internal JS for navbar:-->
+<script>
+  function myFunction() {
+    var x = document.getElementById("navbares");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+</script>
+<!--External Javascripts: -->
+<script type="text/javascript" src="js/Annotate.js" charset="utf-8" defer></script>
+<script type="text/javascript" src="js/dashboard.js" charset="utf-8" defer></script>
+<script type="text/javascript" src="js/search.js" charset="utf-8" defer></script>
+
+
+</body>
+</html>

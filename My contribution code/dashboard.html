@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Created by Achmad Mustafa Kemal and Luke Sciberras -->
+  
+<head>
+<title>Oldowan Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/Annotate.js" charset="utf-8" defer></script>
+<script src="js/dashboard.js" charset="utf-8" defer></script>
+<script src="js/jquery-3.5.1.min.js" charset="utf-8" defer></script>
+<!--   <script src="js/modal.js" charset="utf-8" defer></script> -->
+<script type="text/javascript" src="js/pipeline.js" charset="utf-8" defer></script>
+
+    <!-- Styles, favicons and feather -->
+    <link rel="shortcut icon" type="image/png" href="img/logofinal.png" />
+
+    <!--external CSS for annotation, dashboard, and modal-->
+    <link rel="stylesheet" href="css/newstyledash.css" type="text/css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--external javascript for litepicker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.js" defer></script>
+
+    <!-- Navbar Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="idbodyDBoard">
+
+  <div class="header">
+    <img src="img/logofinal.png" alt="Oldowan Logo" width="10%;" style="border: solid 10px #4d89c8; border-radius: 50%; background-color: white;"/>
+    <p><b>Oldowan IROD - Image Labelling Engine</p></b>
+  </div>
+<div class="topnav" id="navbares">
+  <label class="labelMM">Oldowan IROD - Dashboard</label>
+  <a href="search.html"><i class="fa fa-search"></i>&nbspSearch</a>
+  <a href="Annotate.html"><i class="fa fa-pencil"></i>&nbspAnnotate</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div class="container">
+  <object data="bar.html" width="700" height="400"></object>
+  <object data="bar2.html" width="700" height="400"></object>
+  <object data="map.html" width="700" height="400"></object>
+  <object data="pie.html" width="700" height="400"></object>
+</div>
+
+
+<div class="footer">
+    <p> © 2020 Copyright: 
+        <a href="http://www.oldowan.tech/"> Oldowan.tech </a>
+    </p>
+</div>
+</body>
+
+<!-- Achmad Mustafa Kemal (Javascript for a responsive navbar 19/08/2020-->
+<script>
+  function myFunction() {
+    var x = document.getElementById("navbares");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+
+</html>
+
+
