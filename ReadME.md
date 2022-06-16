@@ -1,4 +1,4 @@
-#Oldowan Tech Image Recognition
+# Oldowan Tech Image Recognition
 
 This project is an iterative development of a machine-learning application using YOLOv4 for detecting and auditing energy systems in the corporate and construction industries.
 
